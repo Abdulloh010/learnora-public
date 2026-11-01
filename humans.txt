@@ -1,0 +1,8 @@
+/* TEAM */
+Creator & developer: Abdulloh Makhammatov
+Contact: support@learnora.uz
+From: Uzbekistan
+
+/* SITE */
+Built with: PHP, MySQL, vanilla JavaScript, HTML, CSS
+Developed with the help of AI coding tools (Claude)

@@ -1,0 +1,16 @@
+# Learnora: make browsers re-check the app shell so new deploys show up without a hard refresh.
+# Versioned assets (?v=N) are still cached; the HTML always points at the newest version.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "^(sw\.js|manifest\.json)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Never serve deploy bookkeeping or hidden files (.git, .env, FTP sync state, ...)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 /\.(git|github|claude)(/|$)

@@ -1,0 +1,4 @@
+# Serve static files only — no PHP execution
+php_flag engine off
+Options -ExecCGI -Indexes
+AddType text/plain .php .php3 .php4 .php5 .phtml
